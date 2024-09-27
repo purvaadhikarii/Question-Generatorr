@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Answer</title>
+</head>
+<body>
+    <h1>Question</h1>
+    <p>{{ question }}</p>
+
+    <h1>Context</h1>
+    <p>{{ context }}</p>
+
+    <h1>Answer</h1>
+    <p>{{ answer }}</p>
+
+    <h1>Generated Questions</h1>
+    <ul>
+        {% for question in questions %}
+        <li>{{ question }}</li>
+        <form action="{{ url_for('answer_question_route') }}" method="post">
+            <input type="hidden" name="question" value="{{ question }}">
+            <input type="hidden" name="context" value="{{ context }}">
+            <input type="submit" value="Get Answer">
+        </form>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('home') }}">Upload another image</a>
+</body>
+</html>

@@ -1,0 +1,70 @@
+body {
+    background-image: url('../images/notebook-1280538_1280.jpg');
+    background-attachment: fixed; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    height: 100vh;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+    color: #f7f5f4; 
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px; 
+    font-size: 80px;
+    width: 100%; 
+}
+
+h2 {
+    color: #f3bc77;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+input[type="file"], button {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #db9292;
+    background-color: #ffd98e; 
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="file"]::file-selector-button, button:hover {
+    background-color: #ff8364; 
+}
+
+input[type="file"] {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.title {
+    font-size: 24px; 
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.upload-section {
+    border: 2px solid #6bd5e1; 
+    padding: 20px;
+    width: 80%; 
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+}
